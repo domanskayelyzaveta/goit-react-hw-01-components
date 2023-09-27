@@ -1,4 +1,3 @@
-import styles from './Transactions.module.css';
 import { Table, TableTitle, TableRow, TableCell } from './Transactions.styled';
 
 export const Transactions = ({ transactions }) => {
