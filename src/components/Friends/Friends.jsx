@@ -1,15 +1,32 @@
-import styles from "./Friends.module.css"; 
+import styles from './Friends.module.css';
+import {
+  Paragraph,
+  StatusDot,
+  FriendList,
+  List,
+  Description,
+} from './Friends.styled';
 
 export const Friends = ({ friends }) => {
-    return (
-        <ul className={styles.statList}>
-            {friends.map(({ id, avatar, name, isOnline }) => (
-                <li className={styles.item} key={id}>
-                    {isOnline ? <span className={styles.status}></span> : null}
-                    <img className={styles.avatar} src={avatar} alt="User avatar" width="48" />
-                    <p className={styles.name}>{name}</p>
-                </li>
-            ))}
-        </ul>
-    );
+  return (
+    <Description>
+      <FriendList>
+        {friends.map(({ id, avatar, name, isOnline }) => (
+          <List className={styles.item} key={id}>
+            <StatusDot
+              isOnline={isOnline}
+              className={styles.status}
+            ></StatusDot>
+            <img
+              className={styles.avatar}
+              src={avatar}
+              alt="User avatar"
+              width="48"
+            />
+            <Paragraph className={styles.name}>{name}</Paragraph>
+          </List>
+        ))}
+      </FriendList>
+    </Description>
+  );
 };

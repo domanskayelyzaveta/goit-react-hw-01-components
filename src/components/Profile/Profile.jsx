@@ -1,36 +1,40 @@
-import styles from "./Profile.module.css";
-
-
+import styles from './Profile.module.css';
+import {
+  Img,
+  Paragraph,
+  ParagraphTitle,
+  Description,
+  Container,
+  List,
+  Stats,
+} from './Profile.styled';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
-    return (
-            <div className={styles.profile}>
-                <div className="description">
-                    <img
-                        src={avatar}
-                        alt="User avatar"
-                        className={styles.avatar}
-                    />
-                    <p className={styles.name}>{username}</p>
-                    <p className={styles.tag}>{tag}</p>
-                    <p className={styles.location}>{location}</p>
-                </div>
+  return (
+    <div>
+      <Container>
+        <Description>
+          <Img src={avatar} alt="User avatar" className={styles.avatar} />
+          <ParagraphTitle className={styles.name}>{username}</ParagraphTitle>
+          <Paragraph className={styles.tag}>{tag}</Paragraph>
+          <Paragraph className={styles.location}>{location}</Paragraph>
+        </Description>
 
-                <ul className={styles.stats}>
-                    <li>
-                        <span className={styles.label}>Followers</span>
-                        <span className={styles.quantity}>{stats.followers}</span>
-                    </li>
-                    <li>
-                        <span className={styles.label}>Views</span>
-                        <span className={styles.quantity}>{stats.views}</span>
-                    </li>
-                    <li>
-                        <span className={styles.label}>Likes</span>
-                        <span className={styles.quantity}>{stats.likes}</span>
-                    </li>
-                </ul>
-            </div>
-    )
+        <Stats>
+          <List>
+            <span className={styles.label}>Followers</span>
+            <span className={styles.quantity}>{stats.followers}</span>
+          </List>
+          <List>
+            <span className={styles.label}>Views</span>
+            <span className={styles.quantity}>{stats.views}</span>
+          </List>
+          <List>
+            <span className={styles.label}>Likes</span>
+            <span className={styles.quantity}>{stats.likes}</span>
+          </List>
+        </Stats>
+      </Container>
+    </div>
+  );
 };
-

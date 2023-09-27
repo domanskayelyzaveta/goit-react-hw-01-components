@@ -1,26 +1,25 @@
-import styles from "./Transactions.module.css"; 
-
+import styles from './Transactions.module.css';
+import { Table, TableTitle, TableRow, TableCell } from './Transactions.styled';
 
 export const Transactions = ({ transactions }) => {
   return (
-    <table className={styles.transactionHistory}>
+    <Table>
       <thead>
-        <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
-        </tr>
+        <TableRow>
+          <TableTitle>Type</TableTitle>
+          <TableTitle>Amount</TableTitle>
+          <TableTitle>Currency</TableTitle>
+        </TableRow>
       </thead>
       <tbody>
         {transactions.map(data => (
-          <tr key={data.id}>
-            <td>{data.type}</td>
-            <td>{data.amount}</td>
-            <td>{data.currency}</td>
-          </tr>
+          <TableRow key={data.id}>
+            <TableCell>{data.type}</TableCell>
+            <TableCell>{data.amount}</TableCell>
+            <TableCell>{data.currency}</TableCell>
+          </TableRow>
         ))}
       </tbody>
-    </table>
+    </Table>
   );
 };
-
