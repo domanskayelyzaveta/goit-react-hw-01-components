@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import styles from "./Transactions.module.css"; 
 
 
@@ -25,10 +24,3 @@ export const Transactions = ({ transactions }) => {
   );
 };
 
-Transactions.PropTypes = {
-    id: PropTypes.number.isRequired,
-    type: PropTypes.string.isRequired,
-    amount: PropTypes.number.isRequired,
-    currency: PropTypes.string.isRequired,
-
-}

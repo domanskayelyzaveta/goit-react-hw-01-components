@@ -1,7 +1,7 @@
-import user from "../components/user.json";
+import user from "./user.json";
 import data from './Statistics/data.json';
-import friends from './Friends/Friends.json';
-import transactions from './Transactions/transactions.json';
+import friends from './Friends/data.json';
+import transactions from './Transactions/data.json';
 
 
 import { Profile } from "./Profile/Profile";
@@ -24,12 +24,10 @@ export const App = () => {
         stats={data}
       />
       <Friends
-        avatar={friends.avatar} 
-        name={friends.name}
-        isOnline={friends.isOnline}
+       friends={friends}
       />
       <Transactions
-        items={transactions}/>
+        transactions={transactions}/>
       </>
   );
 };
