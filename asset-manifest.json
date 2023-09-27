@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/domanskayelyzaveta/goit-react-hw-01-components/static/css/main.7acaea2f.css",
-    "main.js": "/domanskayelyzaveta/goit-react-hw-01-components/static/js/main.7d6b2469.js",
+    "main.css": "/domanskayelyzaveta/goit-react-hw-01-components/static/css/main.02877205.css",
+    "main.js": "/domanskayelyzaveta/goit-react-hw-01-components/static/js/main.8d580f35.js",
     "index.html": "/domanskayelyzaveta/goit-react-hw-01-components/index.html",
-    "main.7acaea2f.css.map": "/domanskayelyzaveta/goit-react-hw-01-components/static/css/main.7acaea2f.css.map",
-    "main.7d6b2469.js.map": "/domanskayelyzaveta/goit-react-hw-01-components/static/js/main.7d6b2469.js.map"
+    "main.02877205.css.map": "/domanskayelyzaveta/goit-react-hw-01-components/static/css/main.02877205.css.map",
+    "main.8d580f35.js.map": "/domanskayelyzaveta/goit-react-hw-01-components/static/js/main.8d580f35.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.7d6b2469.js"
+    "static/css/main.02877205.css",
+    "static/js/main.8d580f35.js"
   ]
 }
